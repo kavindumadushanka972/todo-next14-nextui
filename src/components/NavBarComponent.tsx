@@ -4,20 +4,34 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
-  Button,
+  Avatar,
 } from '@nextui-org/react';
 import { ThemeSwitcher } from './ThemeSwitcher';
+import Image from 'next/image';
 
 const NavBarComponent: React.FC = () => {
   return (
-    <Navbar className='bg-white dark:bg-black shadow-sm'>
+    <Navbar
+      maxWidth="full"
+      position="sticky"
+      className="bg-white dark:bg-[#18181B] shadow-sm w-screen"
+    >
       <NavbarBrand>
-        <p className="font-bold text-inherit">ACME</p>
+        <Image
+          src="/assets/logo.webp"
+          alt="logo"
+          width={100}
+          height={100}
+          className='w-[100px] h-auto'
+          priority
+        />
       </NavbarBrand>
       <NavbarContent justify="end">
         <NavbarItem>
-          <ThemeSwitcher />
+          <div className="flex gap-2">
+            <ThemeSwitcher />
+            <Avatar showFallback src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
+          </div>
         </NavbarItem>
       </NavbarContent>
     </Navbar>

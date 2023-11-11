@@ -46,7 +46,7 @@ const config: Config = {
         dark: {
           layout: {}, // dark theme layout tokens
           colors: {
-            background: "#1f1f1f",
+            background: "#262626",
             foreground: "#ffffff",
             primary: {
               50: "#3B096C",
